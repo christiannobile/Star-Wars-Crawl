@@ -50,7 +50,7 @@ html, body{
 }
 
 /* Set the animation & hide the logo */
-.logo {    
+.logo {
     position: absolute;
     z-index: 1;
     animation: logo 9s ease-out 9s;
@@ -59,7 +59,7 @@ html, body{
 
 /* Scale the logo down and maintain it centered */
 @keyframes logo {
-    0% {        
+    0% {
         transform: scale(2.25);
         opacity: 1;
     }
@@ -68,6 +68,52 @@ html, body{
     }
     100% {
         opacity: 0;
-        transform: scale(0.1);      
+        transform: scale(0.1);
+    }
+}
+
+#board {
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 50%;
+  //
+}
+#board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 100s linear 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 100%;
+  color:#FFF;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -120%;
     }
 }
