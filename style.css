@@ -102,7 +102,8 @@ html, body{
   animation-iteration-count: infinite;
   position: absolute;
   top: 100%;
-  color:#FFF;
+  font-family: 'News Cycle', sans-serif;
+  color: #ffd300;
 }
 
 #title, #subtitle {
